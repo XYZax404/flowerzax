@@ -1,61 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Flower code</title>
-  <link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="img/flowers.png" type="image/x-icon">
-    <title>flowers</title>
+    <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <title>Script HTML Kamu Mau Gak Jadi Pacar Aku?</title>
+    <meta name="description" content="Tapi Kita Akan Putus dalam Waktu">
+    <meta name="keywords" content="Kamu Mau Gak Jadi Pacar Aku Tapi Kita Akan Putus dalam Waktu">
+    <link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+    <link href="https://htmlku.com/bukabentar/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://htmlku.com/bukabentar/script.js"></script>
+    <script src="main.js"></script>
+    <style>
+        :root {
+            --warna-bg: rgba(0, 0, 0, .5); 
+            --warna-teks: #fff;
+            --warna-bingkai: #fff;
+            --bingkai: 8px;
+            --bingkai-kiri: 2px solid var(--warna-bingkai);
+            --bingkai-kanan: 2px solid var(--warna-bingkai);
+            --gaya-font: 'Josefin Sans', sans-serif;
+        }
+        /* Tambahkan gaya CSS untuk bunga di sini jika diperlukan */
+    </style>
 </head>
-<body class="container">
+<body>
+    <div id="bodyblur">
+        <img src="https://feeldreams.github.io/pics/awan/2.jpg" id="wallpaper"/>
+    </div>
 
-<div class="neon-bounce-text">Flower Code</div>
-  <!-- Pembuat code: https://codepen.io/mdusmanansari/pen/BamepLe -->
-  
-    <div class="container">
-    <div class="night"></div>
-    <div class="flowers">
-      <div class="flower flower--1">
-        <div class="flower__leafs flower__leafs--1">
-          <div class="flower__leaf flower__leaf--1"></div>
-          <div class="flower__leaf flower__leaf--2"></div>
-          <div class="flower__leaf flower__leaf--3"></div>
-          <div class="flower__leaf flower__leaf--4"></div>
-          <div class="flower__white-circle"></div>
-  
-          <div class="flower__light flower__light--1"></div>
-          <div class="flower__light flower__light--2"></div>
-          <div class="flower__light flower__light--3"></div>
-          <div class="flower__light flower__light--4"></div>
-          <div class="flower__light flower__light--5"></div>
-          <div class="flower__light flower__light--6"></div>
-          <div class="flower__light flower__light--7"></div>
-          <div class="flower__light flower__light--8"></div>
-  
+    <div id='Content'>
+        <div id="suratin" onClick="memulai();">
+            <img src="https://rayyscoding.github.io/envelope.png"/>
         </div>
-         </div>
-        <div class="flower__line">
-          <div class="flower__line__leaf flower__line__leaf--1"></div>
-          <div class="flower__line__leaf flower__line__leaf--2"></div>
-          <div class="flower__line__leaf flower__line__leaf--3"></div>
-          <div class="flower__line__leaf flower__line__leaf--4"></div>
-          <div class="flower__line__leaf flower__line__leaf--5"></div>
-          <div class="flower__line__leaf flower__line__leaf--6"></div>
-        </div>
-      </div>
-  
-      <div class="flower flower--2">
+        <p id="ket">Klik Suratnya!</p>
+
+        <div id="flowerContent" style="display: none;">
+            <!-- Konten Bunga dari index.html -->
+            <div class="night"></div>
+            <div class="flowers">
+                <div class="flower flower--1">
+                    <div class="flower__leafs flower__leafs--1">
+                        <div class="flower__leaf flower__leaf--1"></div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__white-circle"></div>
+                        <div class="flower__light flower__light--1"></div>
+                        <div class="flower__light flower__light--2"></div>
+                        <div class="flower__light flower__light--3"></div>
+                        <div class="flower__light flower__light--4"></div>
+                        <div class="flower__light flower__light--5"></div>
+                        <div class="flower__light flower__light--6"></div>
+                        <div class="flower__light flower__light--7"></div>
+                        <div class="flower__light flower__light--8"></div>
+                    </div>
+                    <div class="flower__line">
+                        <div class="flower__line__leaf flower__line__leaf--1"></div>
+                        <div class="flower__line__leaf flower__line__leaf--2"></div>
+                        <div class="flower__line__leaf flower__line__leaf--3"></div>
+                        <div class="flower__line__leaf flower__line__leaf--4"></div>
+                        <div class="flower__line__leaf flower__line__leaf--5"></div>
+                        <div class="flower__line__leaf flower__line__leaf--6"></div>
+                    </div>
+                </div>
+                <!-- Tambahkan bunga lainnya di sini -->
+                <div class="flower flower--2">
         <div class="flower__leafs flower__leafs--2">
           <div class="flower__leaf flower__leaf--1"></div>
           <div class="flower__leaf flower__leaf--2"></div>
@@ -319,12 +330,17 @@
         </div>
         <div class="grow-ans" style="--d:3.6s">
           <div class="leaf leaf--3"></div>
+            </div>
         </div>
-      </div>
     </div>
-    <script src="main.js"></script>
-  </body>
-<!-- partial -->
+
+    <script>
+        function memulai() {
+            document.getElementById('suratin').style.display = 'none';
+            document.getElementById('ket').style.display = 'none';
+            document.getElementById('flowerContent').style.display = 'block';
+        }
+    </script>
   <script  src="./script.js"></script>
 
 </body>
